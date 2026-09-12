@@ -42,3 +42,6 @@
 # print(resault)
 
 # def calc_order_cost(*args,coupon,score,express):
+
+
+# 函数类型注解
