@@ -6,6 +6,11 @@
 它故意不写函数、不写异常处理、不写命令行参数。
 把它读懂、跑通、改坏、再修好，你就具备看 todo.py 的基础了。
 
+数据写在 v0_demo.json（故意跟 todo.py 的 todo.json 分开）：
+v0 只会 append 一条 {"title": ..., "done": ...}，没有 id 键。
+如果它写进 todo.json，todo.py list 就会因为找不到 "id" 键而崩溃——
+练习文件绝不能碰真实数据，所以这里换个文件名。
+
 跑法（在本目录下）：
     python v0_最小版.py
     python v0_最小版.py      # 再跑一次，看任务变成 2 条
@@ -19,9 +24,9 @@ from pathlib import Path
 
 # Path(__file__)  这个 .py 文件自己
 # .parent         它所在的文件夹
-# / "todo.json"   拼成完整路径
+# / "v0_demo.json" 拼成完整路径
 # 变量名全大写是约定：表示"这是不会变的常量"
-DATA_FILE = Path(__file__).parent / "todo.json"
+DATA_FILE = Path(__file__).parent / "v0_demo.json"
 
 # ---------- 第 1 步：把数据从磁盘读进内存 ----------
 if DATA_FILE.exists():                                   # 文件存在吗？

@@ -8,3 +8,12 @@ __pycache__/
 # 编辑器配置
 .vscode/
 .idea/
+
+# 教学版 v0 自己的演示数据（不属于正式项目数据）
+v0_demo.json
+
+# todo.json 读不出来时自动留下的备份，不进版本库
+todo.json.bad-*
+
+# 写入过程中的临时文件（正常写完会自动消失）
+todo.json.tmp
